@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#708CB1</color>
-    <color name="colorPrimaryDark">#4E6588</color>
-    <color name="colorAccent">#79CECB</color>
-    <color name="white">#FFFFFF</color>
+    <color name="colorPrimary">#89C3F5</color>
+    <color name="colorPrimaryDark">#86ABD3</color>
+    <color name="colorAccent">#F7E38C</color>
+    <color name ="white">#FFFFFF</color>
+
+    <!-- dots colors -->
+    <color name="color_dot_inactive">#D6D6D6</color>
+    <color name="color_dot_active">#FFDD00</color>
+
     <color name="colorDark">#434B5C</color>
 </resources>
