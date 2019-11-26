@@ -7,7 +7,7 @@
 
     <!-- dots colors -->
     <color name="color_dot_inactive">#D6D6D6</color>
-    <color name="color_dot_active">#FFDD00</color>
+    <color name="color_dot_active">@color/white</color>
 
     <color name="colorDark">#434B5C</color>
 </resources>
