@@ -1,5 +1,6 @@
 package com.aldi.liboorean
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import android.graphics.Color
@@ -17,8 +18,10 @@ import androidx.viewpager.widget.PagerAdapter
 import androidx.viewpager.widget.ViewPager
 import com.aldi.liboorean.MainActivity
 import com.aldi.liboorean.R
-import com.aldi.liboorean.Menu.FirstMenuFragment
 import kotlinx.android.synthetic.main.activity_slide_screen.*
+import android.app.PendingIntent.getActivity
+import com.aldi.liboorean.Menu.FirstMenuActivity
+
 
 class SlideScreen : AppCompatActivity() {
     private var myViewPagerAdapter: MyViewPagerAdapter? = null
@@ -93,9 +96,11 @@ class SlideScreen : AppCompatActivity() {
 
     private fun launchHomeScreen() {
     //    prefManager!!.setLaunched(true) //if want launch slide just for one time, change to false
-        startActivity(Intent(this, FirstMenuFragment::class.java))
-        finish()
-    }
+      startActivity(Intent(this, FirstMenuActivity::class.java))
+
+
+        }
+
 
     //	viewpager change listener
     private var viewPagerPageChangeListener: ViewPager.OnPageChangeListener = object : ViewPager.OnPageChangeListener {
