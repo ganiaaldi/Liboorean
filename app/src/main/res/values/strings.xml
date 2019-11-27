@@ -11,6 +11,9 @@
     <string name="button_lewati">Lewati</string>
     <string name="button_mulai">Mulai</string>
 
+    <string name="category_1">Nama Pulau</string>
+    <string name="category_2">Nama Provinsi</string>
+    <string name="category_3">Nama Kota</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

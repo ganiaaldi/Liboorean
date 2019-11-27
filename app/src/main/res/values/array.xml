@@ -5,4 +5,200 @@
         <item>@color/color_dot_inactive</item>
         <item>@color/color_dot_inactive</item>
     </array>
+
+    <string-array name="category_primary">
+        <item>@string/category_1</item>
+        <item>@string/category_2</item>
+        <item>@string/category_3</item>
+    </string-array>
+    <string-array name="category_pulau">
+        <item>Pulau Sumatra</item>
+        <item>Pulau Jawa</item>
+        <item>Pulau Kalimantan</item>
+        <item>Pulau Sulawesi</item>
+        <item>Pulau Papua</item>
+        <item>Pulau Bali</item>
+        <item>Pulau Nusa Tenggara</item>
+    </string-array>
+    <string-array name="provinsi_sumatra">
+        <item>Aceh</item>
+        <item>Sumatra Utara</item>
+        <item>Sumatra Barat</item>
+        <item>Sumatra Selatan</item>
+        <item>Riau</item>
+        <item>Jambi</item>
+        <item>Bengkulu</item>
+        <item>Lampung</item>
+        <item>Bangka Belitung</item>
+    </string-array>
+    <string-array name="pulau_jawa">
+        <item>DKI Jakarta</item>
+        <item>Jawa Barat</item>
+        <item>Jawa Tengah</item>
+        <item>Jawa Timur</item>
+        <item>Daerah Istimewa Yogyakarta</item>>
+        <item>Banten</item>
+    </string-array>
+    <string-array name="pulau_bali">
+        <item>Bali</item>
+    </string-array>
+    <string-array name="pulau_nusaTenggara">
+        <item>Nusa Tenggara Barat</item>
+        <item>Nusa Tenggara Timur</item>
+    </string-array>
+    <string-array name="pulau_kalimantan">
+        <item>Kalimantan Barat</item>
+        <item>Kalimantan Tengah</item>
+        <item>Kalimantan Selatan</item>
+        <item>Kalimantan Timur</item>
+        <item>Kalimantan Utara</item>
+    </string-array>
+    <string-array name="pulau_sulawesi">
+        <item>Sulawesi Barat</item>
+        <item>Sulawesi Tengah</item>
+        <item>Sulawesi Selatan</item>
+        <item>Sulawesi Tenggara</item>
+        <item>Sulawesi Utara</item>
+    </string-array>
+    <string-array name="pulau_papua">
+        <item>Papua</item>
+        <item>Papua Barat</item>
+    </string-array>
+    <string-array name="sumatra_aceh">
+        <item>Banda Aceh</item>
+    </string-array>
+    <string-array name="sumatra_utara">
+        <item>Medan</item>
+        <item>Pematang Siantar</item>
+        <item>Binjai</item>
+        <item>Tanjungbalai</item>
+        <item>Tebing Tinggi</item>
+    </string-array>
+    <string-array name="sumatra_barat">
+        <item>Padang</item>
+    </string-array>
+    <string-array name="sumatra_selatan">
+        <item>Palembang</item>
+        <item>Lubuklinggau</item>
+    </string-array>
+    <string-array name="sumatra_riau">
+        <item>Pekanbaru</item>
+        <item>Dumai</item>
+    </string-array>
+    <string-array name="sumatra_jambi">
+        <item>Jambi</item>
+    </string-array>
+    <string-array name="sumatra_bengkulu">
+        <item>Bengkulu</item>
+    </string-array>
+    <string-array name="sumatra_bandarlampung">
+        <item>Bandar Lampung</item>
+    </string-array>
+    <string-array name="jawa_jakarta">
+        <item>Jakarta</item>
+    </string-array>
+    <string-array name="jawa_barat">
+        <item>Bandung</item>
+        <item>Bogor</item>
+        <item>Garut</item>
+        <item>Sukabumi</item>
+        <item>Pangandaran</item>
+        <item>Purwakarta</item>
+        <item>Kuningan</item>
+    </string-array>
+    <string-array name="jawa_tengah">
+        <item>Semarang</item>
+        <item>Surakarta</item>
+        <item>Tegal</item>
+        <item>Kudus</item>
+        <item>Magelang</item>
+        <item>Jepara</item>
+        <item>Brebes</item>
+    </string-array>
+    <string-array name="jawa_timur">
+        <item>Banyuwangi</item>
+        <item>Kota Batu</item>
+        <item>Probolinggo</item>
+        <item>Mojokerto</item>
+        <item>Surabaya</item>
+        <item>Malang</item>
+    </string-array>
+    <string-array name="jawa_jogja">
+        <item>Daerah Istimewa Yogyakarta</item>
+    </string-array>
+    <string-array name="jawa_banten">
+        <item>Banten</item>
+    </string-array>
+    <string-array name="kalimantan_barat">
+    <item>Pontianak</item>
+    <item>Singkawang</item>
+    <item>Ketapang</item>
+    <item>Kapuas Hulu</item>
+    <item>Sanggau</item>
+    </string-array>
+    <string-array name="kalimantan_tengah">
+        <item>Barito</item>
+        <item>Kapuas</item>
+        <item>Katingan</item>
+        <item>Kotawaringin</item>
+        <item>Palangkaraya</item>
+    </string-array>
+    <string-array name="kalimantan_selatan">
+        <item>Banjar</item>
+        <item>Hulu Sungai</item>
+        <item>Kotabaru</item>
+        <item>Tanah Laut</item>
+        <item>Banjarmasin</item>
+    </string-array>
+    <string-array name="kalimantan_timur">
+        <item>Berau</item>
+        <item>Kutai</item>
+        <item>Bontang</item>
+        <item>Balikpapan</item>
+        <item>Samarinda</item>
+    </string-array>
+    <string-array name="kalimantan_utara">
+        <item>Bulungan</item>
+        <item>Malinau</item>
+        <item>Nunukan</item>
+        <item>Tana Tidung</item>
+        <item>Tarakan</item>
+    </string-array>
+    <string-array name="sulawesi_barat">
+    <item>Majene</item>
+    <item>Mamasa</item>
+    <item>Mamuju</item>
+    <item>Pasangkayu</item>
+    <item>Polewali Mandar</item>
+    </string-array>
+    <string-array name="sulawesi_tengah">
+        <item>Poso</item>
+        <item>Donggala</item>
+        <item>Bangai</item>
+        <item>Morowali</item>
+        <item>Palu</item>
+    </string-array>
+    <string-array name="sulawesi_selatan">
+        <item>Bone</item>
+        <item>Gowa</item>
+        <item>Luwu</item>
+        <item>Makassar</item>
+        <item>Tana Toraja</item>
+        <item>Sinjai</item>
+        <item>Pinrang</item>
+    </string-array>
+    <string-array name="sulawesi_tenggara">
+        <item>Kolaka</item>
+        <item>Konawe</item>
+        <item>Kendari</item>
+        <item>Buton</item>
+        <item>Wakatobi</item>
+    </string-array>
+    <string-array name="sulawesi_utara">
+        <item>Bolaang</item>
+        <item>Minahasa</item>
+        <item>Manado</item>
+        <item>Kepulauan Talaud</item>
+        <item>Kepulauan Sangihe</item>
+    </string-array>
 </resources>
