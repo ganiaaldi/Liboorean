@@ -7,8 +7,8 @@
     />
     <item
             android:id="@+id/secondMenuFragment"
-            android:icon="@drawable/ic_directions"
-            android:title="Destinasi" />
+            android:icon="@drawable/ic_sun"
+            android:title="Menu" />
     <item
             android:id="@+id/thirdMenuFragment"
             android:icon="@drawable/ic_star"
