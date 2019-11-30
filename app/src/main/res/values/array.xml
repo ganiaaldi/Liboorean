@@ -20,19 +20,14 @@
         <item>Pulau Bali</item>
         <item>Pulau Nusa Tenggara</item>
     </string-array>
-    <string-array name="provinsi_sumatra">
+    <string-array name="pulau_sumatra">
         <item>Aceh</item>
         <item>Sumatra Utara</item>
         <item>Sumatra Barat</item>
         <item>Sumatra Selatan</item>
         <item>Riau</item>
-        <item>Jambi</item>
-        <item>Bengkulu</item>
-        <item>Lampung</item>
-        <item>Bangka Belitung</item>
     </string-array>
     <string-array name="pulau_jawa">
-        <item>DKI Jakarta</item>
         <item>Jawa Barat</item>
         <item>Jawa Tengah</item>
         <item>Jawa Timur</item>
@@ -62,7 +57,6 @@
     </string-array>
     <string-array name="pulau_papua">
         <item>Papua</item>
-        <item>Papua Barat</item>
     </string-array>
     <string-array name="sumatra_aceh">
         <item>Banda Aceh</item>
@@ -76,26 +70,19 @@
     </string-array>
     <string-array name="sumatra_barat">
         <item>Padang</item>
+        <item>Bukittinggi</item>
+        <item>Payakumbuh</item>
+        <item>Sawahlunto</item>
     </string-array>
     <string-array name="sumatra_selatan">
         <item>Palembang</item>
         <item>Lubuklinggau</item>
+        <item>Ogan Komering</item>
+        <item>Musi Rawas</item>
     </string-array>
     <string-array name="sumatra_riau">
         <item>Pekanbaru</item>
         <item>Dumai</item>
-    </string-array>
-    <string-array name="sumatra_jambi">
-        <item>Jambi</item>
-    </string-array>
-    <string-array name="sumatra_bengkulu">
-        <item>Bengkulu</item>
-    </string-array>
-    <string-array name="sumatra_bandarlampung">
-        <item>Bandar Lampung</item>
-    </string-array>
-    <string-array name="jawa_jakarta">
-        <item>Jakarta</item>
     </string-array>
     <string-array name="jawa_barat">
         <item>Bandung</item>
@@ -200,5 +187,17 @@
         <item>Manado</item>
         <item>Kepulauan Talaud</item>
         <item>Kepulauan Sangihe</item>
+    </string-array>
+    <string-array name="papua_papua">
+        <item>Raja Ampat</item>
+        <item>Sorong</item>
+        <item>Wamena</item>
+        <item>Jayapura</item>
+    </string-array>
+    <string-array name="ntb">
+        <item>Nusa Tenggara Barat</item>
+    </string-array>
+    <string-array name="ntt">
+        <item>Nusa Tenggara Timur</item>
     </string-array>
 </resources>
