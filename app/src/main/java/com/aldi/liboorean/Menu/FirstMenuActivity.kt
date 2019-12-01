@@ -2,6 +2,7 @@ package com.aldi.liboorean.Menu
 
 import android.app.PendingIntent.getActivity
 import android.content.Context
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.AttributeSet
@@ -11,6 +12,7 @@ import androidx.appcompat.widget.Toolbar
 import androidx.appcompat.widget.ToolbarWidgetWrapper
 import androidx.core.view.isVisible
 import com.aldi.liboorean.Interface.ChangeToolbarTitle
+import com.aldi.liboorean.MainActivity
 import com.aldi.liboorean.R
 import kotlinx.android.synthetic.main.activity_first_menu.*
 import kotlinx.android.synthetic.main.activity_main.*
@@ -24,6 +26,7 @@ class FirstMenuActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_first_menu)
         chooseCategorySpinner1()
+        setupNextButton()
     }
 
 
@@ -339,6 +342,19 @@ class FirstMenuActivity : AppCompatActivity() {
         }
     }
 
+    private fun setupNextButton() {
+        btnFirstMenu.setOnClickListener {
+            if (category1 != null && category2 != null && category3 != null) {
+                val moveData = Intent(this@FirstMenuActivity, MainActivity::class.java)
+                moveData.putExtra(MainActivity.CATEGORY1, category1)
+                moveData.putExtra(MainActivity.CATEGORY2, category2)
+                moveData.putExtra(MainActivity.CATEGORY2, category3)
+                startActivity(moveData)
+            } else {
+                Toast.makeText(this,"Mohon Pilih Destinasi Terlebih Dahulu!",Toast.LENGTH_LONG)
+            }
+        }
+    }
     private operator fun String.invoke(function: () -> Unit): () -> Unit {
         return function
     }
