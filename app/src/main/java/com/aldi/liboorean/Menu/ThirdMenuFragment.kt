@@ -24,7 +24,7 @@ class ThirdMenuFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         (activity as ChangeToolbarTitle).showToolbar(true)
-        (activity as ChangeToolbarTitle).updateTitle("Fragment Menu 3")
+        (activity as ChangeToolbarTitle).updateTitle("Wishlist")
     }
 
 }

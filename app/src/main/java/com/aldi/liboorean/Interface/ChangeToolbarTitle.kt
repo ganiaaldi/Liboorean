@@ -7,6 +7,5 @@ interface ChangeToolbarTitle{
 
     fun updateTitle(title: String)
     fun toolbarAction(onClickListener: View.OnClickListener)
-    fun updateNavIcon(drawable: Drawable)
     fun showToolbar(show: Boolean)
 }

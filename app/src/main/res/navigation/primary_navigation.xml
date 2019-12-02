@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:app="http://schemas.android.com/apk/res-auto"
-            xmlns:tools="http://schemas.android.com/tools" android:id="@+id/primary_navigation" app:startDestination="@id/slideScreen"
-            tools:ignore="UnusedNavigation">
+            xmlns:tools="http://schemas.android.com/tools" android:id="@+id/primary_navigation"
+            tools:ignore="UnusedNavigation" app:startDestination="@id/firstMenuFragment">
 
-    <activity android:id="@+id/slideScreen" android:name="com.aldi.liboorean.SlideScreen" android:label="SlideScreen"/>
     <fragment android:id="@+id/firstMenuFragment" android:name="com.aldi.liboorean.Menu.FirstMenuFragment"
-              android:label="fragment_first_menu" tools:layout="@layout/fragment_first_menu">
-        <action android:id="@+id/action_firstMenuFragment_to_mainActivity" app:destination="@id/mainActivity"/>
-    </fragment>
-    <activity android:id="@+id/mainActivity" android:name="com.aldi.liboorean.MainActivity"
-              android:label="activity_main" tools:layout="@layout/activity_main"/>
+              android:label="fragment_first_menu" tools:layout="@layout/fragment_first_menu"/>
+    <fragment android:id="@+id/secondMenuFragment" android:name="com.aldi.liboorean.Menu.SecondMenuFragment"
+              android:label="fragment_second_menu" tools:layout="@layout/fragment_second_menu"/>
+    <fragment android:id="@+id/thirdMenuFragment" android:name="com.aldi.liboorean.Menu.ThirdMenuFragment"
+              android:label="fragment_third_menu" tools:layout="@layout/fragment_third_menu"/>
 </navigation>
