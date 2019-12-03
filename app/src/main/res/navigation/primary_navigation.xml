@@ -2,7 +2,7 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:app="http://schemas.android.com/apk/res-auto"
             xmlns:tools="http://schemas.android.com/tools" android:id="@+id/primary_navigation"
-            tools:ignore="UnusedNavigation" app:startDestination="@id/firstMenuFragment">
+            app:startDestination="@id/firstMenuFragment">
 
     <fragment android:id="@+id/firstMenuFragment" android:name="com.aldi.liboorean.Menu.FirstMenuFragment"
               android:label="fragment_first_menu" tools:layout="@layout/fragment_first_menu"/>

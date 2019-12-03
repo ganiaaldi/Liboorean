@@ -347,11 +347,11 @@ class FirstMenuActivity : AppCompatActivity() {
     private fun setupNextButton() {
         btnFirstMenu.setOnClickListener {
             if (category1 != null && category2 != null && category3 != null) {
-                val moveData = Intent(this@FirstMenuActivity, MainActivity::class.java)
-                moveData.putExtra(MainActivity.CATEGORY1, category1)
-                moveData.putExtra(MainActivity.CATEGORY2, category2)
-                moveData.putExtra(MainActivity.CATEGORY3, category3)
-                startActivity(moveData)
+            //    val moveData = Intent(this@FirstMenuActivity, MainActivity::class.java)
+            //    moveData.putExtra(MainActivity.CATEGORY1, category1)
+            //    moveData.putExtra(MainActivity.CATEGORY2, category2)
+            //    moveData.putExtra(MainActivity.CATEGORY3, category3)
+            //    startActivity(moveData)
             } else {
                 Toast.makeText(this,"Mohon Pilih Destinasi Terlebih Dahulu!",Toast.LENGTH_LONG).show()
             }
