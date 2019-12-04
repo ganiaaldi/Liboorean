@@ -19,8 +19,8 @@
     >
         <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/imageAvatar"
-                android:layout_width="150dp"
-                android:layout_height="100dp"
+                android:layout_width="250dp"
+                android:layout_height="150dp"
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="false"
                 android:layout_marginTop="20dp"

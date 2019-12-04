@@ -96,7 +96,7 @@ class SlideScreen : AppCompatActivity() {
 
     private fun launchHomeScreen() {
     //    prefManager!!.setLaunched(true) //if want launch slide just for one time, change to false
-      startActivity(Intent(this, MainActivity::class.java))
+      startActivity(Intent(this, FirstMenuActivity::class.java))
 
 
         }
