@@ -7,9 +7,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import com.aldi.liboorean.Interface.ChangeToolbarTitle
 
 import com.aldi.liboorean.R
+import kotlinx.android.synthetic.main.fragment_second_menu.*
 
 class SecondMenuFragment : Fragment() {
 
@@ -25,5 +27,14 @@ class SecondMenuFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         (activity as ChangeToolbarTitle).showToolbar(true)
         (activity as ChangeToolbarTitle).updateTitle("Destinasi")
+        destinationButton()
     }
+
+    private fun destinationButton() {
+        btnSecondMenu.setOnClickListener {
+            findNavController().navigate(R.id.destinationFragment)
+        }
+    }
+
+
 }

@@ -13,6 +13,8 @@ import android.widget.ArrayAdapter
 import android.widget.SpinnerAdapter
 import android.widget.Toast
 import androidx.core.view.isVisible
+import androidx.navigation.fragment.findNavController
+import com.aldi.liboorean.Interface.ChangeToolbarTitle
 import com.aldi.liboorean.MainActivity
 
 import com.aldi.liboorean.R
@@ -32,9 +34,12 @@ class DestinationFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        (activity as ChangeToolbarTitle).showToolbar(false)
         chooseCategorySpinner1()
         setupNextButton()
+        setupBackButton()
     }
+
     private fun chooseCategorySpinner1() {
         layoutNamaPulau.setOnClickListener {
             if (layoutNamaPulau.isVisible) {
@@ -406,10 +411,14 @@ class DestinationFragment : Fragment() {
             }
         }
     }
-
+    private fun setupBackButton(){
+        buttonBack.setOnClickListener{
+            findNavController().navigateUp()
+        }
+    }
     @SuppressLint("ShowToast")
     private fun setupNextButton() {
-        btnFirstMenu.setOnClickListener {
+        btnDestination.setOnClickListener {
             if (category1 != null && category2 != null && category3 != null) {
               //  val moveData = Intent(getActivity(), MainActivity::class.java)
               //  moveData.putExtra(MainActivity.CATEGORY1, category1)

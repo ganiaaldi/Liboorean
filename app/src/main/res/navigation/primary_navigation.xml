@@ -7,7 +7,12 @@
     <fragment android:id="@+id/firstMenuFragment" android:name="com.aldi.liboorean.Menu.FirstMenuFragment"
               android:label="fragment_first_menu" tools:layout="@layout/fragment_first_menu"/>
     <fragment android:id="@+id/secondMenuFragment" android:name="com.aldi.liboorean.Menu.SecondMenuFragment"
-              android:label="fragment_second_menu" tools:layout="@layout/fragment_second_menu"/>
+              android:label="fragment_second_menu" tools:layout="@layout/fragment_second_menu">
+        <action android:id="@+id/action_secondMenuFragment_to_destinationFragment"
+                app:destination="@id/destinationFragment"/>
+    </fragment>
     <fragment android:id="@+id/thirdMenuFragment" android:name="com.aldi.liboorean.Menu.ThirdMenuFragment"
               android:label="fragment_third_menu" tools:layout="@layout/fragment_third_menu"/>
+    <fragment android:id="@+id/destinationFragment" android:name="com.aldi.liboorean.Menu.DestinationFragment"
+              android:label="DestinationFragment"/>
 </navigation>

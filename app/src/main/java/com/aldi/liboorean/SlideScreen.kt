@@ -20,7 +20,6 @@ import com.aldi.liboorean.MainActivity
 import com.aldi.liboorean.R
 import kotlinx.android.synthetic.main.activity_slide_screen.*
 import android.app.PendingIntent.getActivity
-import com.aldi.liboorean.Menu.FirstMenuActivity
 
 
 class SlideScreen : AppCompatActivity() {

@@ -86,7 +86,7 @@ class MainActivity : AppCompatActivity(), ChangeToolbarTitle {
     }
 
     override fun onBackPressed() {
-        finish()
+        findNavController(R.id.primary_navigation_fragment).navigateUp(appBarConfiguration)
     }
 
 
