@@ -7,6 +7,24 @@
               android:background="@color/white"
              tools:context=".Menu.SecondMenuFragment">
 
+
+    <TextView
+            android:id="@+id/cate1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hello World!"/>
+    <TextView
+            android:id="@+id/cate2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hello World!"
+            android:layout_below="@id/cate1"/>
+    <TextView
+            android:id="@+id/cate3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hello World!"
+            android:layout_below="@id/cate2"/>
     <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnSecondMenu"
             android:layout_marginTop="50dp"

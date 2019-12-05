@@ -2,7 +2,6 @@ package com.aldi.liboorean.Menu
 
 
 import android.annotation.SuppressLint
-import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -15,7 +14,6 @@ import android.widget.Toast
 import androidx.core.view.isVisible
 import androidx.navigation.fragment.findNavController
 import com.aldi.liboorean.Interface.ChangeToolbarTitle
-import com.aldi.liboorean.MainActivity
 
 import com.aldi.liboorean.R
 import kotlinx.android.synthetic.main.fragment_destination.*
@@ -420,11 +418,10 @@ class DestinationFragment : Fragment() {
     private fun setupNextButton() {
         btnDestination.setOnClickListener {
             if (category1 != null && category2 != null && category3 != null) {
-              //  val moveData = Intent(getActivity(), MainActivity::class.java)
-              //  moveData.putExtra(MainActivity.CATEGORY1, category1)
-             //   moveData.putExtra(MainActivity.CATEGORY2, category2)
-              //  moveData.putExtra(MainActivity.CATEGORY3, category3)
-             //   startActivity(moveData)
+            val args = DestinationFragmentDirections.actionDestinationFragmentToSecondMenuFragment(category1!!,
+                category2!!, category3!!
+            )
+                findNavController().navigate(args)
             } else {
                 Toast.makeText(getActivity(),"Mohon Pilih Destinasi Terlebih Dahulu!", Toast.LENGTH_LONG).show()
             }

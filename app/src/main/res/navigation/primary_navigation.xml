@@ -10,9 +10,15 @@
               android:label="fragment_second_menu" tools:layout="@layout/fragment_second_menu">
         <action android:id="@+id/action_secondMenuFragment_to_destinationFragment"
                 app:destination="@id/destinationFragment"/>
+        <argument android:name="category1Args" app:argType="string" android:defaultValue="1"/>
+        <argument android:name="category2Args" app:argType="string" android:defaultValue="1"/>
+        <argument android:name="category3Args" app:argType="string" android:defaultValue="1"/>
     </fragment>
     <fragment android:id="@+id/thirdMenuFragment" android:name="com.aldi.liboorean.Menu.ThirdMenuFragment"
               android:label="fragment_third_menu" tools:layout="@layout/fragment_third_menu"/>
     <fragment android:id="@+id/destinationFragment" android:name="com.aldi.liboorean.Menu.DestinationFragment"
-              android:label="DestinationFragment"/>
+              android:label="DestinationFragment">
+        <action android:id="@+id/action_destinationFragment_to_secondMenuFragment"
+                app:destination="@id/secondMenuFragment"/>
+    </fragment>
 </navigation>

@@ -52,12 +52,6 @@ class MainActivity : AppCompatActivity(), ChangeToolbarTitle {
         setupActionBar(mainNavControl, appBarConfiguration)
         showNavigationMenu(mainNavControl)
         showBottomMenu(mainNavControl)
-        val namaPulau = intent.getStringExtra(CATEGORY1)
-        val namaProvinsi = intent.getStringExtra(CATEGORY2)
-        val namaKota = intent.getStringExtra(CATEGORY3)
-        cate1?.setText(namaPulau).toString()
-            cate2?.text = namaProvinsi.toString()
-           cate3?.text = namaKota.toString()
     }
 
     private operator fun String.invoke(function: () -> Unit): () -> Unit {
@@ -221,11 +215,7 @@ class MainActivity : AppCompatActivity(), ChangeToolbarTitle {
         }
     }
 
-    companion object{
-        const val CATEGORY1 = "category1"
-        const val CATEGORY2 = "category2"
-        const val CATEGORY3 = "category3"
-    }
+
 }
 
 

@@ -14,6 +14,9 @@ import com.aldi.liboorean.R
 import kotlinx.android.synthetic.main.fragment_second_menu.*
 
 class SecondMenuFragment : Fragment() {
+    lateinit var namaPulau : String
+    lateinit var namaProvinsi : String
+    lateinit var namaKota: String
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -28,6 +31,15 @@ class SecondMenuFragment : Fragment() {
         (activity as ChangeToolbarTitle).showToolbar(true)
         (activity as ChangeToolbarTitle).updateTitle("Destinasi")
         destinationButton()
+
+//Get arguments passing from previous fragment(workspaceName, workspaceType, workspaceCategory)
+        namaPulau = SecondMenuFragmentArgs.fromBundle(arguments!!).category1Args
+        namaProvinsi = SecondMenuFragmentArgs.fromBundle(arguments!!).category2Args
+        namaKota = SecondMenuFragmentArgs.fromBundle(arguments!!).category3Args
+        //view textview(Workspace Name) in android
+      cate1.text = namaPulau
+        cate2.text = namaProvinsi
+        cate3.text = namaKota
     }
 
     private fun destinationButton() {
