@@ -10,6 +10,7 @@ import android.view.ViewGroup
 import com.aldi.liboorean.Interface.ChangeToolbarTitle
 
 import com.aldi.liboorean.R
+import kotlinx.android.synthetic.main.fragment_first_menu.*
 
 class FirstMenuFragment : Fragment() {
 
@@ -25,5 +26,8 @@ class FirstMenuFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         (activity as ChangeToolbarTitle).showToolbar(true)
         (activity as ChangeToolbarTitle).updateTitle("Beranda")
+
+       val rvPromoo = rvPromo
+        rvPromoo.setHasFixedSize(true)
     }
 }
