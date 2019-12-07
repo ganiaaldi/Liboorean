@@ -34,6 +34,12 @@
         <item name="android:textColor">@color/colorDark</item>
     </style>
 
+    <style name="MediumDarkBoldText" parent="TextAppearance.AppCompat">
+        <item name="android:fontFamily">@font/opensans_bold</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/colorDark</item>
+    </style>
+
     <style name="DarkRegularText" parent="TextAppearance.AppCompat">
         <item name="android:fontFamily">@font/opensans_regular</item>
         <item name="android:textSize">16sp</item>
