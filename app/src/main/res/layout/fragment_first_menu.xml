@@ -24,5 +24,44 @@ android:background="@color/white">
              android:orientation="horizontal"
             tools:listitem="@layout/item_promo"/>
 
+    <androidx.appcompat.widget.AppCompatTextView
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rekomendasi Liburan"
+            style="@style/MediumDarkBoldText"
+            android:layout_below="@id/rvPromo"
+            android:id="@+id/tvRekomendasi"
+    />
 
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvRekomendasi"
+            android:layout_below="@id/tvRekomendasi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            tools:listitem="@layout/item_rekomendasi"
+          />
+
+    <androidx.appcompat.widget.AppCompatTextView
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cek Wishlist Liburan Anda!"
+            android:gravity="center_horizontal"
+            android:layout_centerHorizontal="true"
+            style="@style/MediumDarkBoldText"
+            android:layout_below="@id/rvRekomendasi"
+            android:id="@+id/tvGoToWishlist"
+    />
+
+    <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnGoToWishlist"
+            android:layout_below="@id/tvGoToWishlist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Cek"
+            android:background="@drawable/bg_rounded_secondary"
+            style="@style/Button"/>
 </RelativeLayout>
