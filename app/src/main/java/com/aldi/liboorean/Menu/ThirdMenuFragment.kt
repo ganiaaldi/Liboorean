@@ -7,9 +7,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.Navigation.findNavController
+import androidx.navigation.fragment.findNavController
 import com.aldi.liboorean.Interface.ChangeToolbarTitle
 
 import com.aldi.liboorean.R
+import kotlinx.android.synthetic.main.fragment_third_menu.*
 
 class ThirdMenuFragment : Fragment() {
 
@@ -25,6 +28,12 @@ class ThirdMenuFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         (activity as ChangeToolbarTitle).showToolbar(true)
         (activity as ChangeToolbarTitle).updateTitle("Wishlist")
+    }
+
+    private fun destinationButton() {
+        btnAddWishlist.setOnClickListener {
+            findNavController().navigate(R.id.secondMenuFragment)
+        }
     }
 
 }

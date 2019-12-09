@@ -37,9 +37,9 @@ class SecondMenuFragment : Fragment() {
         namaProvinsi = SecondMenuFragmentArgs.fromBundle(arguments!!).category2Args
         namaKota = SecondMenuFragmentArgs.fromBundle(arguments!!).category3Args
         //view textview(Workspace Name) in android
-      cate1.text = namaPulau
-        cate2.text = namaProvinsi
-        cate3.text = namaKota
+    //  cate1.text = namaPulau
+    ///    cate2.text = namaProvinsi
+     //   cate3.text = namaKota
     }
 
     private fun destinationButton() {

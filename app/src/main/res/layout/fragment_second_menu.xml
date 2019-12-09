@@ -7,32 +7,39 @@
               android:background="@color/white"
              tools:context=".Menu.SecondMenuFragment">
 
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/layoutNullDestination"
+    >
+        <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:background="@drawable/destination"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="100dp"
+                android:id="@+id/img_nullDestination"/>
 
-    <TextView
-            android:id="@+id/cate1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Hello World!"/>
-    <TextView
-            android:id="@+id/cate2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Hello World!"
-            android:layout_below="@id/cate1"/>
-    <TextView
-            android:id="@+id/cate3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Hello World!"
-            android:layout_below="@id/cate2"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvNullDestination"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/MediumDarkBoldText"
+                android:gravity="center_horizontal"
+                android:layout_below="@id/img_nullDestination"
+                android:text="Pilih Tujuan Destinasi Anda Sekarang Juga!"/>
+
     <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnSecondMenu"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="20dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:text="@string/button_lanjut"
             android:background="@drawable/bg_rounded_secondary"
-            style="@style/Button"/>
+            style="@style/Button"
+    android:layout_below="@id/tvNullDestination"/>
 
+</RelativeLayout>
 </RelativeLayout>
