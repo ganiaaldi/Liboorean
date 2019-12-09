@@ -11,6 +11,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/layoutNullDestination"
+            android:visibility="gone"
     >
         <androidx.appcompat.widget.AppCompatImageView
                 android:layout_width="200dp"
@@ -42,4 +43,34 @@
     android:layout_below="@id/tvNullDestination"/>
 
 </RelativeLayout>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/destinationTabLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    app:tabBackground="@drawable/contact_tab_indicator_color"
+                    app:tabIndicatorColor="@color/colorPrimary"
+                    app:tabIndicatorHeight="3dp"
+                    app:tabMode="fixed"
+                    app:tabSelectedTextColor="@color/white"
+                    app:tabTextAppearance="@style/TabText" />
+
+            <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/destinationViewPager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </RelativeLayout>
