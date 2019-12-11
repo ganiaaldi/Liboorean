@@ -23,22 +23,12 @@
 
         <TextView
                 android:id="@+id/tvNameVacation"
-                android:layout_width="370dp"
+                android:layout_width="match_parent"
                 android:layout_height="30dp"
                 style="@style/MediumDarkBoldText"
                 android:layout_below="@id/imageViewVacation"
+                android:drawableEnd="@drawable/ic_star"
                 />
-
-
-        <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/imageViewWishlist"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:background="@drawable/ic_star"
-                android:scaleType="centerCrop"
-                android:layout_below="@+id/imageViewVacation"
-                android:layout_toEndOf="@id/tvNameVacation"
-       />
 
         <TextView
                 android:id="@+id/tvLokasiVacation"

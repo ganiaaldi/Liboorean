@@ -19,7 +19,7 @@ class VacationAdapter(val listVacation: ArrayList<Vacation>) : RecyclerView.Adap
     }
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, i: Int): ListViewHolder {
-        val view: View = LayoutInflater.from(viewGroup.context).inflate(R.layout.item_rekomendasi, viewGroup, false)
+        val view: View = LayoutInflater.from(viewGroup.context).inflate(R.layout.item_vacation, viewGroup, false)
         return ListViewHolder(view)
     }
 

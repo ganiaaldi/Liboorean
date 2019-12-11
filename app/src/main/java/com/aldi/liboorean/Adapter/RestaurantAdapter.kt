@@ -19,7 +19,7 @@ class RestaurantAdapter(val listRestaurant: ArrayList<Restaurant>) : RecyclerVie
     }
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, i: Int): ListViewHolder {
-        val view: View = LayoutInflater.from(viewGroup.context).inflate(R.layout.item_rekomendasi, viewGroup, false)
+        val view: View = LayoutInflater.from(viewGroup.context).inflate(R.layout.item_restaurant, viewGroup, false)
         return ListViewHolder(view)
     }
 
