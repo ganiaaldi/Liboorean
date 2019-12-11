@@ -8,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
+import com.aldi.liboorean.Adapter.DestinationPagerAdapter
 import com.aldi.liboorean.Interface.ChangeToolbarTitle
 
 import com.aldi.liboorean.R
@@ -32,6 +33,9 @@ class SecondMenuFragment : Fragment() {
         (activity as ChangeToolbarTitle).updateTitle("Destinasi")
         destinationButton()
 
+      val pagerAdapter = DestinationPagerAdapter(childFragmentManager)
+        destinationViewPager.adapter = pagerAdapter
+        destinationTabLayout.setupWithViewPager(destinationViewPager)
 //Get arguments passing from previous fragment(workspaceName, workspaceType, workspaceCategory)
         namaPulau = SecondMenuFragmentArgs.fromBundle(arguments!!).category1Args
         namaProvinsi = SecondMenuFragmentArgs.fromBundle(arguments!!).category2Args
