@@ -20,5 +20,22 @@
               android:label="DestinationFragment">
         <action android:id="@+id/action_destinationFragment_to_secondMenuFragment"
                 app:destination="@id/secondMenuFragment"/>
+        <action android:id="@+id/action_destinationFragment_to_hotelFragment" app:destination="@id/hotelFragment"/>
+        <action android:id="@+id/action_destinationFragment_to_vacationFragment2"
+                app:destination="@id/vacationFragment"/>
+        <action android:id="@+id/action_destinationFragment_to_restaurantFragment"
+                app:destination="@id/restaurantFragment"/>
+    </fragment>
+    <fragment android:id="@+id/vacationFragment" android:name="com.aldi.liboorean.Destination.VacationFragment"
+              android:label="fragment_vacation" tools:layout="@layout/fragment_vacation">
+        <argument android:name="category2args" android:defaultValue="null" app:argType="string" app:nullable="true"/>
+    </fragment>
+    <fragment android:id="@+id/hotelFragment" android:name="com.aldi.liboorean.Destination.HotelFragment"
+              android:label="fragment_hotel" tools:layout="@layout/fragment_hotel">
+        <argument android:name="category2args" app:argType="string" app:nullable="true" android:defaultValue="null"/>
+    </fragment>
+    <fragment android:id="@+id/restaurantFragment" android:name="com.aldi.liboorean.Destination.RestaurantFragment"
+              android:label="fragment_restaurant" tools:layout="@layout/fragment_restaurant">
+        <argument android:name="category2args" app:argType="string" app:nullable="true" android:defaultValue="null"/>
     </fragment>
 </navigation>

@@ -69,7 +69,11 @@
                     android:id="@+id/destinationViewPager"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent" />
-
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/cate2"
+    android:visibility="gone"/>
         </LinearLayout>
 
 
