@@ -23,9 +23,9 @@ class DestinationPagerAdapter(fragmentManager: FragmentManager) :
 
     override fun getPageTitle(position: Int): CharSequence? {
         return when (position) {
-            0 -> "Vacation"
+            0 -> "Wisata"
             1 -> "Hotel"
-            else -> "Restaurant"
+            else -> "Kuliner"
         }
     }
 }

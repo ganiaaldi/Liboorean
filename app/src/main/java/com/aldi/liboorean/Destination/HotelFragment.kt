@@ -21,9 +21,9 @@ import kotlinx.android.synthetic.main.fragment_hotel.view.*
 
 class HotelFragment : Fragment() {
     private val hotelData = arrayListOf(
-        Hotel("Bukit Keraton","Jawa Barat","Bandung", "aa", R.drawable.tebingkeraton),
-        Hotel("Danau Bacan","Jawa Barat","Sukabumi", "bb", R.drawable.danaubacan),
-        Hotel("Curug Lawe","Jawa Tengah","Semarang", "cc", R.drawable.curuglawe)
+        Hotel("Bukit Keraton","Jawa Barat","Bandung", "aa","a", R.drawable.tebingkeraton),
+        Hotel("Danau Bacan","Jawa Barat","Sukabumi", "bb","a", R.drawable.danaubacan),
+        Hotel("Curug Lawe","Jawa Tengah","Semarang", "cc","a", R.drawable.curuglawe)
     )
 
     override fun onCreateView(

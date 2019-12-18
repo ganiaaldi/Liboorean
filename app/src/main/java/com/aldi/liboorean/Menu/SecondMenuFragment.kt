@@ -37,13 +37,22 @@ class SecondMenuFragment : Fragment() {
         destinationViewPager.adapter = pagerAdapter
         destinationTabLayout.setupWithViewPager(destinationViewPager)
 //Get arguments passing from previous fragment(workspaceName, workspaceType, workspaceCategory)
-        namaPulau = SecondMenuFragmentArgs.fromBundle(arguments!!).category1Args
-        namaProvinsi = SecondMenuFragmentArgs.fromBundle(arguments!!).category2Args
-        namaKota = SecondMenuFragmentArgs.fromBundle(arguments!!).category3Args
+        namaPulau = SecondMenuFragmentArgs.fromBundle(arguments!!).category1Args!!
+        namaProvinsi = SecondMenuFragmentArgs.fromBundle(arguments!!).category2Args!!
+        namaKota = SecondMenuFragmentArgs.fromBundle(arguments!!).category3Args!!
         //view textview(Workspace Name) in android
     //  cate1.text = namaPulau
     ///    cate2.text = namaProvinsi
      //   cate3.text = namaKota
+
+        if (namaPulau == "null" && namaProvinsi == "null" && namaKota == "null"){
+            layoutNullDestination.visibility=View.VISIBLE
+            destinationNotNull.visibility=View.GONE
+        } else
+        {
+            layoutNullDestination.visibility=View.GONE
+            destinationNotNull.visibility=View.VISIBLE
+        }
     }
 
     private fun destinationButton() {
