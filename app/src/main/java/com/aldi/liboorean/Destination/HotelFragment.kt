@@ -9,6 +9,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
+import android.widget.Toast
 import androidx.fragment.app.FragmentActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.aldi.liboorean.Adapter.HotelAdapter
@@ -22,7 +23,7 @@ import kotlinx.android.synthetic.main.fragment_second_menu.*
 
 
 class HotelFragment : Fragment() {
-    private val hotelDataAceh = arrayListOf(
+    private val hotelData = arrayListOf(
         Hotel("Ayani Hotel","Aceh","Aceh", "Jl. Jend. Ahmad Yani No.20, Peunayong, Kuta Alam, Kota Banda Aceh, Aceh 23122",
             "Hotel kami terletak tepat di jantung kota Banda Aceh, lokasi kami pada akhirnya nyaman, relatif beberapa menit dari pusat kota, kantor-kantor pemerintah dan Masjid Baiturrahman yang terkenal dengan mobil dan berjalan kaki ke berbagai jalan makanan. Pilihan utama untuk semua jenis wisatawan. Masjid Baiturrahman yang ikonik, Kantor Pemerintah dan pusat bisnis di Banda Aceh berlokasi nyaman dalam radius kurang dari 5 kilometer. dibutuhkan sekitar 20 menit perjalanan dengan mobil ke Bandara Internasional Sultan Iskandar Muda\n" +
                     "Ayani Hotel Banda Aceh bisa menjadi pilihan akomodasi penginapan yang sangat tepat untuk Anda yang membutuhkan penginapan nyaman di Kuta Alam. Fasilitas yang tersedia di Ayani Hotel Banda Aceh akan membuat Anda semakin betah menginap. Nikmati pelayanan terbaik dari Ayani Hotel Banda Aceh ketika Anda melakukan kunjungan kerja atau berwisata ke Kuta Alam dan dapatkan pengalaman menginap yang tak terlupakan bersama keluarga dan orang tercinta Anda.\n",
@@ -38,11 +39,7 @@ class HotelFragment : Fragment() {
                     "Ada restoran dan lounge lobi. Fasilitas lainnya mencakup kolam renang outdoor, pusat kebugaran, dan spa, plus area bermain anak-anak dan ruang acara. Sarapan prasmanan tersedia.\n",
             R.drawable.acehhermeshotel)
     )
-    private val hotelData = arrayListOf(
-        Hotel("Bukit Keraton","Jawa Barat","Bandung", "aa","a", R.drawable.tebingkeraton),
-        Hotel("Danau Bacan","Jawa Barat","Sukabumi", "bb","a", R.drawable.danaubacan),
-        Hotel("Curug Lawe","Jawa Tengah","Semarang", "cc","a", R.drawable.curuglawe)
-    )
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -59,7 +56,15 @@ class HotelFragment : Fragment() {
         hotelRecyclerView.apply {
             layoutManager = LinearLayoutManager(activity, LinearLayout.VERTICAL, false)
                 adapter = HotelAdapter(hotelData)
-            }
+            (adapter as HotelAdapter).setOnItemClickCallback(object : HotelAdapter.OnItemClickCallback {
+                override fun onItemClicked(data: Hotel) {
+                    showSelectedHotel(data)
+                }
+            })
+        }
     }
 
+    private fun showSelectedHotel(vacation: Hotel) {
+        Toast.makeText(context, "Kamu memilih " + vacation.nameHotel, Toast.LENGTH_SHORT).show()
+    }
 }

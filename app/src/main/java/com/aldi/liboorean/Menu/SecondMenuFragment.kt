@@ -7,9 +7,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import com.aldi.liboorean.Adapter.DestinationPagerAdapter
 import com.aldi.liboorean.Interface.ChangeToolbarTitle
+import com.aldi.liboorean.Model.Vacation
 
 import com.aldi.liboorean.R
 import kotlinx.android.synthetic.main.fragment_second_menu.*
@@ -60,5 +62,8 @@ class SecondMenuFragment : Fragment() {
         }
     }
 
+    private fun showSelectedVacation(vacation: Vacation) {
+        Toast.makeText(context, "Kamu memilih " + vacation.nameVacation, Toast.LENGTH_SHORT).show()
+    }
 
 }

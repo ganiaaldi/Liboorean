@@ -12,6 +12,19 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 
 class VacationAdapter(val listVacation: ArrayList<Vacation>) : RecyclerView.Adapter<VacationAdapter.ListViewHolder> () {
+    override fun getItemCount(): Int {
+        return listVacation.size
+    }
+
+    private lateinit var onItemClickCallback: OnItemClickCallback
+
+    fun setOnItemClickCallback(onItemClickCallback: OnItemClickCallback) {
+        this.onItemClickCallback = onItemClickCallback
+    }
+    interface OnItemClickCallback {
+        fun onItemClicked(data: Vacation)
+    }
+
     inner class ListViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView) {
         var imgVacation : ImageView = itemView.findViewById(R.id.imageViewVacation)
         var namaVacation : TextView =  itemView.findViewById(R.id.tvNameVacation)
@@ -30,11 +43,9 @@ class VacationAdapter(val listVacation: ArrayList<Vacation>) : RecyclerView.Adap
             .apply(RequestOptions())
             .into(holder.imgVacation)
         holder.namaVacation.text = rekomendasi.nameVacation
-        holder.lokasiVacation.text=  rekomendasi.kotaVacation
+        holder.lokasiVacation.text = rekomendasi.kotaVacation
+        holder.itemView.setOnClickListener {
+            onItemClickCallback.onItemClicked(listVacation[holder.adapterPosition])
+        }
     }
-
-    override fun getItemCount(): Int {
-        return listVacation.size
-    }
-
 }

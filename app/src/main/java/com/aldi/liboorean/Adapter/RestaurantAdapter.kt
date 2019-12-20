@@ -12,6 +12,18 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 
 class RestaurantAdapter(val listRestaurant: ArrayList<Restaurant>) : RecyclerView.Adapter<RestaurantAdapter.ListViewHolder> () {
+    override fun getItemCount(): Int {
+        return listRestaurant.size
+    }
+
+    private lateinit var onItemClickCallback: OnItemClickCallback
+
+    fun setOnItemClickCallback(onItemClickCallback: OnItemClickCallback) {
+        this.onItemClickCallback = onItemClickCallback
+    }
+    interface OnItemClickCallback {
+        fun onItemClicked(data: Restaurant)
+    }
     inner class ListViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView) {
         var imgRestaurant : ImageView = itemView.findViewById(R.id.imageViewRestaurant)
         var namaRestaurant : TextView =  itemView.findViewById(R.id.tvNameRestaurant)
@@ -31,10 +43,9 @@ class RestaurantAdapter(val listRestaurant: ArrayList<Restaurant>) : RecyclerVie
             .into(holder.imgRestaurant)
         holder.namaRestaurant.text = rekomendasi.nameRestaurant
         holder.lokasiRestaurant.text=  rekomendasi.kotaRestaurant
-    }
-
-    override fun getItemCount(): Int {
-        return listRestaurant.size
+        holder.itemView.setOnClickListener {
+            onItemClickCallback.onItemClicked(listRestaurant[holder.adapterPosition])
+        }
     }
 
 }

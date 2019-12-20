@@ -12,6 +12,19 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 
 class HotelAdapter (val listHotel: ArrayList<Hotel>) : RecyclerView.Adapter<HotelAdapter.ListViewHolder> () {
+
+    override fun getItemCount(): Int {
+        return listHotel.size
+    }
+
+    private lateinit var onItemClickCallback: OnItemClickCallback
+
+    fun setOnItemClickCallback(onItemClickCallback: OnItemClickCallback) {
+        this.onItemClickCallback = onItemClickCallback
+    }
+    interface OnItemClickCallback {
+        fun onItemClicked(data: Hotel)
+    }
     inner class ListViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView) {
         var imgHotel : ImageView = itemView.findViewById(R.id.imageViewHotel)
         var namaHotel : TextView =  itemView.findViewById(R.id.tvNameHotel)
@@ -31,10 +44,9 @@ class HotelAdapter (val listHotel: ArrayList<Hotel>) : RecyclerView.Adapter<Hote
             .into(holder.imgHotel)
         holder.namaHotel.text = rekomendasi.nameHotel
         holder.lokasiHotel.text=  rekomendasi.kotaHotel
+        holder.itemView.setOnClickListener {
+            onItemClickCallback.onItemClicked(listHotel[holder.adapterPosition])
+        }
     }
-
-    override fun getItemCount(): Int {
-        return listHotel.size
-    }
-
+    
 }

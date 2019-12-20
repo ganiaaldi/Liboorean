@@ -61,7 +61,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
-                android:text="@string/button_lanjut"
+                android:text="Tambahkan Ke Wishlist"
                 android:background="@drawable/bg_rounded_secondary"
                 style="@style/Button"/>
 

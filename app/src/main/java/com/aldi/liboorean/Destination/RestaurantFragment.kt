@@ -9,6 +9,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.aldi.liboorean.Adapter.RestaurantAdapter
 import com.aldi.liboorean.Model.Restaurant
@@ -19,7 +20,7 @@ import kotlinx.android.synthetic.main.fragment_second_menu.*
 
 
 class RestaurantFragment : Fragment() {
-    private val restaurantDataAceh = arrayListOf(
+    private val restaurantData = arrayListOf(
         Restaurant("Eungkot Keumamah","Aceh","Aceh", "Wilayah Aceh yang dikelilingi perairan membuat masyarakat Aceh dekat dengan hasil laut. Yang paling mahsyur sejak dahulu adalah ikan tongkol atau ‘Engkot Suree’. Proses memasak ‘Eungkot Keumamah’ yang melibatkan perebusan, pengasapan, dan penjemuran di terik matahari menjadikan ikan tongkol bertekstur keras seperti kayu. Namun begitu, hal ini menjadikan masakan tersebut awet, tahan lama, dan tidak mudah basi.\n" +
                 "Eungkot Keumamah dapat diolah lagi menjadi berbagai masakan. Karena harganya terjangkau, masyarakat Aceh gemar mengonsumsi dan menyimpan bahan makanan ini untuk dimasak sewaktu-waktu. Beberapa produsen juga sudah mulai menyediakan produk Eungkot Keumamah dalam kemasan per 100 gram atau per kilogram. Cocok untuk oleh-oleh, nih.\n" +
                 "Lokasi: Tersedia hampir di seluruh rumah makan di Banda Aceh (dengan ragam olahannya)\n" +
@@ -33,11 +34,7 @@ class RestaurantFragment : Fragment() {
                 "Lokasi: Jalan Tgk. Pulo Dibaroh (di belakang Masjid Raya Baiturrahman), Banda Aceh\n" +
                 "Harga: Sekitar 5,000 – 15,000 IDR per porsi\n", R.drawable.acehrujakk)
     )
-    private val restaurantData = arrayListOf(
-        Restaurant("Bukit Keraton","Jawa Barat","Bandung", "aa", R.drawable.tebingkeraton),
-        Restaurant("Danau Bacan","Jawa Barat","Sukabumi", "bb", R.drawable.danaubacan),
-        Restaurant("Curug Lawe","Jawa Tengah","Semarang", "cc", R.drawable.curuglawe)
-    )
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -54,6 +51,15 @@ class RestaurantFragment : Fragment() {
         restaurantRecyclerView.apply {
             layoutManager = LinearLayoutManager(activity, LinearLayout.VERTICAL, false)
                 adapter = RestaurantAdapter(restaurantData)
-            }
+            (adapter as RestaurantAdapter).setOnItemClickCallback(object : RestaurantAdapter.OnItemClickCallback {
+                override fun onItemClicked(data: Restaurant) {
+                    showSelectedRestaurant(data)
+                }
+            })
+        }
+    }
+
+    private fun showSelectedRestaurant(vacation: Restaurant) {
+        Toast.makeText(context, "Kamu memilih " + vacation.nameRestaurant, Toast.LENGTH_SHORT).show()
     }
 }
