@@ -10,10 +10,17 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.Toast
+import androidx.annotation.IdRes
 import androidx.fragment.app.FragmentActivity
+import androidx.navigation.NavController
+import androidx.navigation.NavOptions
+import androidx.navigation.Navigator
+import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.aldi.liboorean.Adapter.HotelAdapter
 import com.aldi.liboorean.Menu.SecondMenuFragment
+import com.aldi.liboorean.Menu.SecondMenuFragmentDirections
 import com.aldi.liboorean.Model.Hotel
 
 import com.aldi.liboorean.R
@@ -138,6 +145,10 @@ class HotelFragment : Fragment() {
     }
 
     private fun showSelectedHotel(vacation: Hotel) {
-        Toast.makeText(context, "Kamu memilih " + vacation.nameHotel, Toast.LENGTH_SHORT).show()
+       // Toast.makeText(context, "Kamu memilih " + vacation.nameHotel, Toast.LENGTH_SHORT).show()
+      //  Toast.makeText(context, view?.findNavController()?.currentDestination?.label, Toast.LENGTH_SHORT).show()
+        val args = SecondMenuFragmentDirections.actionSecondMenuFragmentToDetailFragment(vacation.nameHotel,vacation.provinsiHotel,vacation.kotaHotel,vacation.alamatHotel,
+            vacation.detailHotel,vacation.photoHotel)
+            findNavController().navigate(args)
     }
 }

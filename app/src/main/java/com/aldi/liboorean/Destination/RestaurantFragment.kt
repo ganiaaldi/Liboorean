@@ -10,8 +10,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.Toast
+import androidx.navigation.Navigation.findNavController
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.aldi.liboorean.Adapter.RestaurantAdapter
+import com.aldi.liboorean.Menu.SecondMenuFragmentDirections
 import com.aldi.liboorean.Model.Restaurant
 
 import com.aldi.liboorean.R
@@ -138,6 +141,7 @@ class RestaurantFragment : Fragment() {
                 adapter = RestaurantAdapter(restaurantData)
             (adapter as RestaurantAdapter).setOnItemClickCallback(object : RestaurantAdapter.OnItemClickCallback {
                 override fun onItemClicked(data: Restaurant) {
+                    
                     showSelectedRestaurant(data)
                 }
             })
@@ -145,6 +149,8 @@ class RestaurantFragment : Fragment() {
     }
 
     private fun showSelectedRestaurant(vacation: Restaurant) {
-        Toast.makeText(context, "Kamu memilih " + vacation.nameRestaurant, Toast.LENGTH_SHORT).show()
+        val args = SecondMenuFragmentDirections.actionSecondMenuFragmentToDetailFragment(vacation.nameRestaurant,vacation.provinsiRestaurant,vacation.kotaRestaurant,vacation.kotaRestaurant,
+            vacation.detailRestaurant,vacation.photoRestaurant)
+        findNavController().navigate(args)
     }
 }

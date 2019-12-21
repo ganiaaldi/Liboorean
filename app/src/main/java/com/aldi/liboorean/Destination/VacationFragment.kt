@@ -10,10 +10,13 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.Toast
+import androidx.navigation.Navigation.findNavController
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.aldi.liboorean.Adapter.VacationAdapter
 import com.aldi.liboorean.Menu.SecondMenuFragment
 import com.aldi.liboorean.Menu.SecondMenuFragmentArgs
+import com.aldi.liboorean.Menu.SecondMenuFragmentDirections
 import com.aldi.liboorean.Model.Vacation
 
 import com.aldi.liboorean.R
@@ -144,6 +147,8 @@ class VacationFragment : Fragment() {
     }
 
     private fun showSelectedVacation(vacation: Vacation) {
-        Toast.makeText(context, "Kamu memilih " + vacation.nameVacation, Toast.LENGTH_SHORT).show()
+        val args = SecondMenuFragmentDirections.actionSecondMenuFragmentToDetailFragment(vacation.nameVacation,vacation.provinsiVacation,vacation.kotaVacation,vacation.kotaVacation,
+            vacation.detailVacation,vacation.photoVacation)
+        findNavController().navigate(args)
     }
 }

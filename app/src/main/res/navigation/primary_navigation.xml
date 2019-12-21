@@ -13,6 +13,7 @@
         <argument android:name="category1Args" app:argType="string" android:defaultValue="null" app:nullable="true"/>
         <argument android:name="category2Args" app:argType="string" android:defaultValue="null" app:nullable="true"/>
         <argument android:name="category3Args" app:argType="string" app:nullable="true" android:defaultValue="null"/>
+        <action android:id="@+id/action_secondMenuFragment_to_detailFragment" app:destination="@id/detailFragment"/>
     </fragment>
     <fragment android:id="@+id/thirdMenuFragment" android:name="com.aldi.liboorean.Menu.ThirdMenuFragment"
               android:label="fragment_third_menu" tools:layout="@layout/fragment_third_menu"/>
@@ -28,14 +29,26 @@
     </fragment>
     <fragment android:id="@+id/vacationFragment" android:name="com.aldi.liboorean.Destination.VacationFragment"
               android:label="fragment_vacation" tools:layout="@layout/fragment_vacation">
-        <argument android:name="category2args" android:defaultValue="null" app:argType="string" app:nullable="true"/>
+        <action android:id="@+id/action_vacationFragment_to_detailFragment" app:destination="@id/detailFragment"/>
     </fragment>
     <fragment android:id="@+id/hotelFragment" android:name="com.aldi.liboorean.Destination.HotelFragment"
               android:label="fragment_hotel" tools:layout="@layout/fragment_hotel">
-        <argument android:name="category2args" app:argType="string" app:nullable="true" android:defaultValue="null"/>
+        <action android:id="@+id/action_hotelFragment_to_detailFragment" app:destination="@id/detailFragment"/>
     </fragment>
     <fragment android:id="@+id/restaurantFragment" android:name="com.aldi.liboorean.Destination.RestaurantFragment"
               android:label="fragment_restaurant" tools:layout="@layout/fragment_restaurant">
-        <argument android:name="category2args" app:argType="string" app:nullable="true" android:defaultValue="null"/>
+        <action android:id="@+id/action_restaurantFragment_to_detailFragment" app:destination="@id/detailFragment"/>
+    </fragment>
+    <fragment android:id="@+id/detailFragment" android:name="com.aldi.liboorean.Detail.DetailFragment"
+              android:label="DetailFragment">
+        <argument android:name="nameDestination" app:argType="string" app:nullable="true" android:defaultValue="null"/>
+        <argument android:name="provinsiDestination" app:argType="string" app:nullable="true"
+                  android:defaultValue="null"/>
+        <argument android:name="kotaDestination" app:argType="string" app:nullable="true" android:defaultValue="null"/>
+        <argument android:name="alamatDestination" app:argType="string" app:nullable="true"
+                  android:defaultValue="null"/>
+        <argument android:name="detailDestination" app:argType="string" app:nullable="true"
+                  android:defaultValue="null"/>
+        <argument android:name="photoDestination" app:argType="integer" android:defaultValue="0"/>
     </fragment>
 </navigation>
