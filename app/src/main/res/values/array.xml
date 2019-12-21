@@ -22,9 +22,9 @@
     </string-array>
     <string-array name="pulau_sumatra">
         <item>Aceh</item>
-        <item>Sumatra Utara</item>
-        <item>Sumatra Barat</item>
-        <item>Sumatra Selatan</item>
+        <item>Sumatera Utara</item>
+        <item>Sumatera Barat</item>
+        <item>Sumatera Selatan</item>
         <item>Riau</item>
     </string-array>
     <string-array name="pulau_jawa">
@@ -111,7 +111,7 @@
         <item>Malang</item>
     </string-array>
     <string-array name="jawa_jogja">
-        <item>	</item>
+        <item>Daerah Istimewa Yogyakarta</item>
     </string-array>
     <string-array name="jawa_banten">
         <item>Banten</item>

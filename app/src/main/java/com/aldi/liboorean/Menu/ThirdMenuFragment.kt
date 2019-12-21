@@ -28,6 +28,7 @@ class ThirdMenuFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         (activity as ChangeToolbarTitle).showToolbar(true)
         (activity as ChangeToolbarTitle).updateTitle("Wishlist")
+        destinationButton()
     }
 
     private fun destinationButton() {
