@@ -12,6 +12,18 @@ import com.bumptech.glide.request.RequestOptions
 import kotlinx.android.synthetic.main.item_promo.view.*
 
 class PromoAdapter(val listPromo: ArrayList<Promo>) : RecyclerView.Adapter<PromoAdapter.ListViewHolder> () {
+    override fun getItemCount(): Int {
+        return listPromo.size
+    }
+
+    private lateinit var onItemClickCallback: OnItemClickCallback
+
+    fun setOnItemClickCallback(onItemClickCallback: OnItemClickCallback) {
+        this.onItemClickCallback = onItemClickCallback
+    }
+    interface OnItemClickCallback {
+        fun onItemClicked(data: Promo)
+    }
     inner class ListViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView) {
     var imgPromo : ImageView = itemView.findViewById(R.id.imageViewPromo)
     }
@@ -27,11 +39,9 @@ class PromoAdapter(val listPromo: ArrayList<Promo>) : RecyclerView.Adapter<Promo
             .load(promo.photoPromo)
             .apply(RequestOptions())
             .into(holder.imgPromo)
+        holder.itemView.setOnClickListener {
+            onItemClickCallback.onItemClicked(listPromo[holder.adapterPosition])
+        }
     }
-
-    override fun getItemCount(): Int {
-        return listPromo.size
-    }
-
 
 }

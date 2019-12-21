@@ -5,7 +5,11 @@
             app:startDestination="@id/firstMenuFragment">
 
     <fragment android:id="@+id/firstMenuFragment" android:name="com.aldi.liboorean.Menu.FirstMenuFragment"
-              android:label="fragment_first_menu" tools:layout="@layout/fragment_first_menu"/>
+              android:label="fragment_first_menu" tools:layout="@layout/fragment_first_menu">
+        <action android:id="@+id/action_firstMenuFragment_to_promoDetailFragment"
+                app:destination="@id/promoDetailFragment"/>
+        <action android:id="@+id/action_firstMenuFragment_to_detailFragment" app:destination="@id/detailFragment"/>
+    </fragment>
     <fragment android:id="@+id/secondMenuFragment" android:name="com.aldi.liboorean.Menu.SecondMenuFragment"
               android:label="fragment_second_menu" tools:layout="@layout/fragment_second_menu">
         <action android:id="@+id/action_secondMenuFragment_to_destinationFragment"
@@ -50,5 +54,9 @@
         <argument android:name="detailDestination" app:argType="string" app:nullable="true"
                   android:defaultValue="null"/>
         <argument android:name="photoDestination" app:argType="integer" android:defaultValue="0"/>
+    </fragment>
+    <fragment android:id="@+id/promoDetailFragment" android:name="com.aldi.liboorean.Detail.PromoDetailFragment"
+              android:label="PromoDetailFragment">
+        <argument android:name="photoPromo" app:argType="integer" android:defaultValue="0"/>
     </fragment>
 </navigation>

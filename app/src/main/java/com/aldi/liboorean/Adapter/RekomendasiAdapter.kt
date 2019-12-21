@@ -13,6 +13,19 @@ import com.bumptech.glide.request.RequestOptions
 import kotlinx.android.synthetic.main.item_promo.view.*
 
 class RekomendasiAdapter(val listRekomendasi: ArrayList<Rekomendasi>) : RecyclerView.Adapter<RekomendasiAdapter.ListViewHolder> () {
+
+    override fun getItemCount(): Int {
+        return listRekomendasi.size
+    }
+
+    private lateinit var onItemClickCallback: OnItemClickCallback
+
+    fun setOnItemClickCallback(onItemClickCallback: OnItemClickCallback) {
+        this.onItemClickCallback = onItemClickCallback
+    }
+    interface OnItemClickCallback {
+        fun onItemClicked(data: Rekomendasi)
+    }
     inner class ListViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView) {
         var imgRekomendasi : ImageView = itemView.findViewById(R.id.imageViewRekomendasi)
         var namaRekomendasi : TextView =  itemView.findViewById(R.id.tvNameRekomendasi)
@@ -31,12 +44,12 @@ class RekomendasiAdapter(val listRekomendasi: ArrayList<Rekomendasi>) : Recycler
             .apply(RequestOptions())
             .into(holder.imgRekomendasi)
         holder.namaRekomendasi.text = rekomendasi.nameRekomendasi
-        holder.lokasiRekomendasi.text=  rekomendasi.daerahRekomendasi
+        holder.lokasiRekomendasi.text=  rekomendasi.kotaRekomendasi
+        holder.itemView.setOnClickListener {
+            onItemClickCallback.onItemClicked(listRekomendasi[holder.adapterPosition])
+        }
     }
 
-    override fun getItemCount(): Int {
-        return listRekomendasi.size
-    }
-
+ 
 
 }
