@@ -11,7 +11,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@color/white"
-            android:id="@+id/layoutPromoDetail">
+            android:id="@+id/layoutPromoDetail"
+            android:layout_marginStart="2dp">
 
         <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/buttonBackk"
@@ -23,6 +24,16 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="18dp"
                 app:srcCompat="@drawable/ic_arrow_back"
+        />
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvDetailText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/MediumDarkBoldText"
+                android:text="Detail Tempat"
+                android:layout_marginTop="18dp"
+                android:layout_alignStart="@id/buttonBackk"
+                android:textAlignment="center"
         />
 
         <RelativeLayout
@@ -47,12 +58,11 @@
             </androidx.cardview.widget.CardView>
         </RelativeLayout>
         <RelativeLayout
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="5dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
         android:layout_below="@id/imgPromo"
-        android:id="@+id/layoutDetail"
-        android:background="@color/colorPrimary">
+        android:id="@+id/layoutDetail">
 
 
         <androidx.appcompat.widget.AppCompatTextView
@@ -82,13 +92,23 @@
                />
         </RelativeLayout>
         <TextView
-                android:layout_below="@id/layoutDetail"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:id="@+id/tvDeskripsi"
+            android:layout_below="@id/layoutDetail"
+            android:layout_marginTop="20dp"
+            android:text="Deskripsi"
+            style="@style/MediumDarkBoldText"
+        />
+        <TextView
+                android:layout_below="@id/tvDeskripsi"
                 android:id="@+id/tv_item_description"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="5dp"
                 android:layout_marginBottom="16dp"
                 android:lineSpacingMultiplier="1"
+                android:gravity="fill_horizontal"
         />
         <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btnAddWishlistt"

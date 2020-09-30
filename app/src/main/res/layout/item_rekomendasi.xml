@@ -24,7 +24,7 @@
         <TextView
                 android:id="@+id/tvNameRekomendasi"
                 android:layout_width="match_parent"
-                android:layout_height="30dp"
+                android:layout_height="25dp"
                 style="@style/MediumDarkBoldText"/>
 
         <TextView
